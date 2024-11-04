@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>мой сайт офигенный</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://media1.tenor.com/m/YC7faYqFiMUAAAAC/akashi-akashi-seijuro.gif'); 
+            background-size: cover;
+            color: #fff;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            position: relative;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            position: relative;
+            margin-right: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        nav li:hover > ul {
+            display: block;
+        }
+        section {
+            margin: 40px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li>
+                <a href="#page1">Страница 1</a>
+                <ul>
+                    <li><a href="#image-gallery">Галерея</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Контакты</a></li>
+            <li><a href="#algorithm">Алгоритмическая задача</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Добро пожаловать на сайт!</h1>
+        <p>Данный сайт создан для выполнения контрольной работы по Основам Прикладного Программирования</p>
+        <p>Это главная страница. Используйте навигацию для перехода.</p>
+    </section>
+
+    <section id="page1">
+    <h1>Страница 1</h1>
+    <p>Это первая страница.</p>
+
+    <h2>Список</h2>
+    <ul>
+        <li><a href="https://store.steampowered.com/" target="_blank">Ссылка на внешний сайт</a>
+        <li>Я кто
+            <ul>
+                <li>Я абсолют</li>
+                <li>И я вижу всё</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 id="image-gallery">Галерея</h2>
+    <div class="gallery">
+        <img src="https://i.pinimg.com/originals/49/c3/78/49c3781160e7fb3bbd1c295fd84a702f.jpg" alt="Миниатюра 1" width="100" onclick="openLargeImage('https://i.pinimg.com/originals/49/c3/78/49c3781160e7fb3bbd1c295fd84a702f.jpg')">
+        <img src="https://i.pinimg.com/originals/b6/04/b3/b604b3f2163946dd884a3c47affc0e22.jpg" alt="Миниатюра 2" width="100" onclick="openLargeImage('https://i.pinimg.com/originals/b6/04/b3/b604b3f2163946dd884a3c47affc0e22.jpg')">
+        <img src="https://i.pinimg.com/originals/8a/be/bb/8abebb9241dfc5e16ed93b01632b4cde.jpg" alt="Миниатюра 3" width="100" onclick="openLargeImage('https://i.pinimg.com/originals/8a/be/bb/8abebb9241dfc5e16ed93b01632b4cde.jpg')">
+    </div>
+
+    <script>
+        function openLargeImage(imageSrc) {
+            window.open(imageSrc, '_blank');
+        }
+    </script>
+</section>
+    <section id="contact">
+        <h1>Контактная форма</h1>
+        <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+            <input type="hidden"  name="q" value="search">
+
+            <label for="surname">Фамилия:</label>
+            <input type="text" id="surname" name="surname" required><br>
+
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="group">Группа:</label>
+            <input type="text" id="group" name="group"><br>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="date">Дата отправки:</label>
+            <input type="date" id="date" name="date"><br>
+
+            <input type="submit" value="Отправить">
+        </form>
+    </section>
+    
+    <section id="algorithm">
+        <form action="https://www.bing.com/search?" id="User  Enter" name="User  Enter" target="_blank">
+            <ul>
+                <li>Формулировка задачи 
+                    <br><textarea cols="60" rows="4" id="task" name="formulation" readonly>Дано вещественное число A. Вычислить x = 0 при A > 100; x = A при A < 61, в противном случае x = A^4.</textarea></li>
+                <li>A: <input id="numberA" name="a" type="number" value="50" placeholder="Введите число A"></li>
+                <li>Результат решения задачи: <span id="result">не определен</span></li>
+                <li><input id="calculate" type="button" value="Вычислить"></li>
+                <li><input id="send" type="button" value="Отправить"></li>
+            </ul>
+        </form>
+    </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('calculate').onclick = calculate;
+                document.getElementById('send').onclick = sendData;
+            });
+    
+            function calculate() {
+                const a = parseFloat(document.getElementById('numberA').value);
+                let x;
+    
+                if (isNaN(a)) {
+                    alert("Пожалуйста, введите корректное число A.");
+                    return;
+                }
+    
+                if (a > 100) {
+                    x = 0;
+                } else if (a < 61) {
+                    x = a;
+                } else {
+                    x = Math.pow(a, 4);
+                }
+    
+                
+                document.getElementById('result').innerText = x; 
+            }
+    
+            function sendData() {
+                const formulation = document.getElementById('task').value;
+                const a = document.getElementById('numberA').value;
+                const result = document.getElementById('result').innerText;
+    
+                
+                const actionUrl = `https://www.bing.com/search?q=${encodeURIComponent(formulation + " A: " + a + " Результат: " + result)}`;
+                window.open(actionUrl, '_blank');
+            }
+        </script>
+    
+
+    <footer>
+        <p>Текущее положение: <span id="current-page">Главная страница</span></p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Паспорт</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: aliceblue;
+        }
+        .image-container {
+            position: relative; 
+            max-width: 100%; 
+            height: auto; 
+        }
+        .image-container img {
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+        }
+        .text1 {
+            position: absolute;
+            top: 11%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            color: black; 
+            font-size: 16px; 
+            text-align: center; 
+            font-weight: 600;
+        }
+        .text2 {
+            position: absolute; 
+            top: 22.5%; 
+            left: 27%; 
+            transform: translate(-50%, -50%); 
+            color: black;
+            font-size: 16px; 
+            text-align: center; 
+            font-weight: 600;
+        }
+        .text3 {
+            position: absolute; 
+            top: 22.5%; 
+            left: 67%; 
+            transform: translate(-50%, -50%); 
+            color: black; 
+            font-size: 16px; 
+            text-align: center; 
+            font-weight: 600;
+        }
+        .text4 {
+            position: absolute; 
+            top: 57%; 
+            left: 55%; 
+            transform: translate(-50%, -50%); 
+            color: black; 
+            font-size: 16px; 
+            text-align: center; 
+            font-weight: 600;
+        }
+        .text5 {
+            position: absolute; 
+            top: 64.7%; 
+            left: 55%; 
+            transform: translate(-50%, -50%); 
+            color: black; 
+            font-size: 16px; 
+            text-align: center; 
+            font-weight: 600;
+        }
+        .text6 {
+            position: absolute;
+            top: 68.5%; 
+            left: 55%; 
+            transform: translate(-50%, -50%); 
+            color: black; 
+            font-size: 16px; 
+            text-align: center; 
+            font-weight: 600;
+        }
+        .text7 {
+            position: absolute;
+            top: 72.5%; 
+            left: 43%; 
+            transform: translate(-50%, -50%); 
+            color: black; 
+            font-size: 16px; 
+            text-align: center; 
+            font-weight: 600;
+        }
+        .text8 {
+            position: absolute;
+            top: 72.5%; 
+            left: 70%; 
+            transform: translate(-50%, -50%); 
+            color: black; 
+            font-size: 16px; 
+            text-align: center; 
+            font-weight: 600;
+        }
+        .text9 {
+            position: absolute; 
+            top: 80%; 
+            left: 65%; 
+            transform: translate(-50%, -50%); 
+            color: black; 
+            font-size: 16px;
+            text-align: center; 
+            font-weight: 600;
+            line-height: 165%;
+        }
+        .photo {
+            position: absolute;
+            top: 73%; 
+            left: 18%; 
+            transform: translate(-50%, -50%); 
+            width: 23%; 
+            height: 23.5%;
+            border-radius: 10px; 
+            background-image: url("https://i.pinimg.com/736x/f2/96/25/f296254b767e054ca211f9c3e9ecf841.jpg");
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        .image123 {
+            height: 1200px;
+            width: 1200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="https://sun9-46.userapi.com/impg/LqKVjS-4_Uc8Y14lZJ0sDatJ8eBo9wydSJ4BjA/NW7mVBo4Pdo.jpg?size=517x726&quality=95&sign=ba1151c8de428b556babb567a48401c0&type=album" alt="Изображение">
+        <div class="text1">ГУ МВД РОССИИ ПО Г. МОСКВЕ</div>
+        <div class="text2">01.01.2024</div>
+        <div class="text3">770-107</div>
+        <div class="text4">МАРТЫНОВ</div>
+        <div class="text5">ИГОРЬ</div>
+        <div class="text6">ИГОРЕВИЧ</div>
+        <div class="text7">М</div>
+        <div class="text8">19.06.2006</div>
+        <div class="text9">Г. СЛОБОДЗЕЯ СЛОБОДЗЕЙСКИЙ Р-Н РЕСП. МОЛДОВА</div>
+        <div class="photo"></div>
+    </div>
+
+    <div class="image-container">
+        <img src="https://sun9-12.userapi.com/impg/WMZWOmsGZ-3b06PLggv3y8pslPkB-4MgdX3RfA/A8NHd0Mrk64.jpg?size=1919x1009&quality=95&sign=079b566943081384c195bdefd822f617&type=album" alt="ыыыы" class="image123">
+    </div>
+
+    <script>
+        const lastName = document.querySelector('.text4').innerText; 
+        const firstName = document.querySelector('.text5').innerText; 
+        const birthDate = document.querySelector('.text8').innerText; 
+
+        console.log(`Фамилия: ${lastName}, Имя: ${firstName}, Дата рождения: ${birthDate}`);
+        
+        function transliterate(text) {
+        const translitMap = {
+            'А': 'A', 'Б': 'B', 'В': 'V', 'Г': 'G', 'Д': 'D', 'Е': 'E', 'Ё': 'Yo',
+            'Ж': 'Zh', 'З': 'Z', 'И': 'I', 'Й': 'Y', 'К': 'K', 'Л': 'L', 'М': 'M',
+            'Н': 'N', 'О': 'O', 'П': 'P', 'Р': 'R', 'С': 'S', 'Т': 'T', 'У': 'U',
+            'Ф': 'F', 'Х': 'Kh', 'Ц': 'Ts', 'Ч': 'Ch', 'Ш': 'Sh', 'Щ': 'Shch', 'Ъ': '',
+            'Ы': 'Y', 'Э': 'E', 'Ю': 'Yu', 'Я': 'Ya',
+            'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'yo',
+            'ж': 'zh', 'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm',
+            'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u',
+            'ф': 'f', 'х': 'kh', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'щ': 'shch', 'ъ': '',
+            'ы': 'y', 'э': 'e', 'ю': 'yu', 'я': 'ya',
+            'ь': ' '
+        };
+
+        return text.split('').map(char => translitMap[char] || char).join('');
+        }
+
+    
+        const lastNameElement = document.querySelector('.text4');
+        const firstNameElement = document.querySelector('.text5');
+
+        lastNameElement.addEventListener('click', () => {
+            lastNameElement.innerText = transliterate(lastNameElement.innerText);
+        });
+
+        firstNameElement.addEventListener('click', () => {
+            firstNameElement.innerText = transliterate(firstNameElement.innerText);
+        });
+    </script>
+</body>
+</html>
+
