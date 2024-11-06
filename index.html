@@ -165,41 +165,30 @@
         <form id="orderForm" action="https://www.bing.com/search?" target="_blank" method="POST">
         
             <label for="name">Имя:</label>
-            <input type="text" id="name" name="customer_name" required placeholder="Введите ваше имя"><br><br>
+            <input type="text" id="name" value="Иван" name="customer_name" required placeholder="Введите ваше имя"><br><br>
 
-        
             <label for="phone">Телефон:</label>
-            <input type="text" id="phone" name="customer_phone" required placeholder="Введите ваш телефон"><br><br>
+            <input type="text" value="+78881000000" id="phone" name="customer_phone" required placeholder="Введите ваш телефон"><br><br>
     
-            
             <label for="quantity">Количество:</label>
-            <input type="number" id="quantity" name="product_quantity" min="1" required placeholder="Введите количество"><br><br>
-    
+            <input type="number" id="quantity" name="product_quantity" min="1" value="1" required placeholder="Введите количество"><br><br>
          
             <label>Способ доставки:</label><br>
-            <input type="radio" id="delivery1" name="delivery_method" value="courier" required>
+            <input type="radio" id="delivery1" name="delivery_method" value="courier" checked>
             <label for="delivery1">Курьером</label><br>
             <input type="radio" id="delivery2" name="delivery_method" value="post">
             <label for="delivery2">Почтой</label><br><br>
-    
             
             <label>Дополнительные услуги:</label><br>
-            <input type="checkbox" id="giftWrap" name="additional_services" value="gift_wrap">
+            <input type="checkbox" id="giftWrap" name="additional_services" value="gift_wrap" checked>
             <label for="giftWrap">Упаковка в подарок</label><br>
             <input type="checkbox" id="insurance" name="additional_services" value="insurance">
             <label for="insurance">Страховка</label><br><br>
-    
-            
-            <label for="deliveryDate">Дата доставки:</label>
-            <input type="date" id="deliveryDate" name="delivery_date" required><br><br>
-    
            
             <label for="password">Пароль:</label>
-            <input type="password" id="password" name="customer_password" required placeholder="Введите пароль"><br><br>
-    
+            <input type="password" id="password" name="customer_password" value="12345" required placeholder="Введите пароль"><br><br>
             
             <input type="hidden" name="order_source" value="website">
-    
             
             <button type="submit">Отправить заказ</button>
     </form>
