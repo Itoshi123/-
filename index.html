@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://media1.tenor.com/m/YC7faYqFiMUAAAAC/akashi-akashi-seijuro.gif'); 
+            background-image: url('https://i.pinimg.com/originals/27/be/de/27bedef0ec1f175458dd03e97a692ace.gif'); 
             background-size: cover;
             color: #fff;
         }
@@ -135,6 +135,7 @@
             window.open(imageSrc, '_blank');
         }
     </script>
+
 </section>
     <section id="contact">
         <h1>Контактная форма</h1>
@@ -161,45 +162,38 @@
 
             <input type="submit" value="Отправить">
         </form>
-        <h1>Форма ЙОУЙОУЙОУ</h1>
-        <form id="orderForm" name="orderForm" action="https://www.bing.com/search?" target="_blank">
-        
-            <label for="name">Имя:</label>
-            <input type="text" id="name" value="Иван" name="customer_name" required placeholder="Введите ваше имя"><br><br>
+    </section>
 
+    <section>
+        <h1>Форма ЙОУЙОУЙОУ</h1>
+        <form action="https://www.bing.com/?scope=web&cc=RU" id="orderForm" name="orderForm" target="_blank">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="customer_name" value="Иван" required placeholder="Введите ваше имя"><br><br>
+    
             <label for="phone">Телефон:</label>
-            <input type="text" value="+78881000000" id="phone" name="customer_phone" required placeholder="Введите ваш телефон"><br><br>
+            <input type="text" id="phone" name="customer_phone" value="+79999999999" required placeholder="Введите ваш телефон"><br><br>
     
             <label for="quantity">Количество:</label>
-            <input type="number" id="quantity" name="product_quantity" min="1" value="1" required placeholder="Введите количество"><br><br>
-         
+            <input type="number" id="quantity" name="product_kolichestvo" min="1" value="1" required placeholder="Введите количество"><br><br>
+    
             <label>Способ доставки:</label><br>
             <input type="radio" id="delivery1" name="delivery_method" value="courier" checked>
             <label for="delivery1">Курьером</label><br>
             <input type="radio" id="delivery2" name="delivery_method" value="post">
             <label for="delivery2">Почтой</label><br><br>
-            
+    
             <label>Дополнительные услуги:</label><br>
             <input type="checkbox" id="giftWrap" name="additional_services" value="gift_wrap" checked>
             <label for="giftWrap">Упаковка в подарок</label><br>
             <input type="checkbox" id="insurance" name="additional_services" value="insurance">
             <label for="insurance">Страховка</label><br><br>
-           
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="customer_password" value="12345" required placeholder="Введите пароль"><br><br>
-            
-            <input type="hidden" name="order_source" value="website">
-            
-            <button type="submit">Отправить заказ</button>
-    </form>
-
-    <script>
-        document.getElementById('orderForm').addEventListener('submit', function(event) {
-            console.log('Форма отправлена');
-        });
-    </script>
-    </section>
     
+            <input type="hidden" name="order_source" value="website">
+    
+            <button type="submit">Отправить заказ</button>
+        </form>
+    </section>
+
     <section id="algorithm">
         <form action="https://www.bing.com/search?" id="User  Enter" name="User  Enter" target="_blank">
             <ul>
