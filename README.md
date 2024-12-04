@@ -6,4 +6,4 @@
 
 https://Itoshi123.github.io/-/index.html
 
-https://Itoshi123.github.io/-/index.html
+https://Itoshi123.github.io/-/ggez.html
