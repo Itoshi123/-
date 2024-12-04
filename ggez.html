@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Сайт</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://i.pinimg.com/originals/1e/3e/18/1e3e18489fe059524c1b2fb162ab8611.gif); 
+    color: #333; 
+    font-size: 16px; 
+    }
+
+    @media (max-width: 768px) {
+        body {
+            font-size: 14px; 
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 992px) {
+        body {
+            font-size: 15px;
+        }
+    }
+
+    h1, h2, h3 {
+        margin: 0; 
+    }
+
+    .textyes {
+        color: black; 
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" onclick="showPage('home')">NEKONYA</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('about')">О нас</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('services')">Услуги</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('contact')">Контакты</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('form')">Форма</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showCart()">Корзина (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4" id="content">
+
+        <div id="home" class="page">
+            <h1 class="textyes">Добро пожаловать в наш магазин!</h1>
+            <p class="textyes">Это главная страница, где вы можете найти основные товарные позиции.</p>
+
+            <h2 class="textyes">Аниме-фигурки</h2>
+            <div class="row">
+                <div class="col-md-4 merch-item">
+                    <div class="card">
+                        <img src="https://avatars.mds.yandex.net/i?id=2ee81bf36727dbc46fa16945a8014456_l-5227398-images-thumbs&n=13" class="card-img-top" alt="Фигурка 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Ayanami Rey</h5>
+                            <p class="card-text">2999 руб. Уникальный дизайн и высокое качество.</p>
+                            <button class="btn btn-primary" onclick="addToCart('Ayanami Rey', 'https://avatars.mds.yandex.net/i?id=2ee81bf36727dbc46fa16945a8014456_l-5227398-images-thumbs&n=13')">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 merch-item">
+                    <div class="card">
+                        <img src="https://avatars.mds.yandex.net/i?id=e7151d69db2b77be9db2a17c94ddbf85_l-4911508-images-thumbs&n=13" class="card-img-top" alt="Фигурка 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Cowboy Beebop</h5>
+                            <p class="card-text">4999 руб. Идеально подходит для коллекционеров.</p>
+                            <button class="btn btn-primary" onclick="addToCart('Cowboy Beebop', 'https://avatars.mds.yandex.net/i?id=e7151d69db2b77be9db2a17c94ddbf85_l-4911508-images-thumbs&n=13')">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 merch-item">
+                    <div class="card">
+                        <img src="https://avatars.mds.yandex.net/i?id=a3cbb439acca5682cd0c2ec7b1c5fba7_l-5232386-images-thumbs&n=13" class="card-img-top" alt="Фигурка 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Winsmoke Sanji</h5>
+                            <p class="card-text">3999 руб. Высокое качество и внимание к деталям.</p>
+                            <button class="btn btn-primary" onclick="addToCart('Winsmoke Sanji', 'https://avatars.mds.yandex.net/i?id=a3cbb439acca5682cd0c2ec7b1c5fba7_l-5232386-images-thumbs&n=13')">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="textyes">Аниме-мерч</h2>
+            <div class="row">
+                <div class="col-md-4 merch-item">
+                    <div class="card">
+                        <img src="https://avatars.mds.yandex.net/i?id=32cb8d239467a536832c8329f810900d_l-9151390-images-thumbs&n=13" class="card-img-top" alt="Мерч 1">
+                        <div class="card-body">
+                            <h5 class="card-title">SLAYER</h5>
+                            <p class="card-text">3099 руб. Уникальное худи под ваше любимое аниме.</p>
+                            <button class="btn btn-primary" onclick="addToCart('SLAYER', 'https://avatars.mds.yandex.net/i?id=32cb8d239467a536832c8329f810900d_l-9151390-images-thumbs&n=13')">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 merch-item">
+                    <div class="card">
+                        <img src="https://avatars.mds.yandex.net/i?id=236fa384565b3e5e1140be55dfb054e3_l-7716570-images-thumbs&n=13" class="card-img-top" alt="Мерч 2">
+                        <div class="card-body">
+                            <h5 class="card-title">FaInLo</h5>
+                            <p class="card-text">1599 руб. Для самых прекрасных девушек.</p>
+                            <button class="btn btn-primary" onclick="addToCart('FaInLo', 'https://avatars.mds.yandex.net/i?id=236fa384565b3e5e1140be55dfb054e3_l-7716570-images-thumbs&n=13')">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 merch-item">
+                    <div class="card">
+                        <img src="https://avatars.mds.yandex.net/i?id=2b5a713d8a2100540719a5c75c5cb9d0_l-5662815-images-thumbs&n=13" class="card-img-top" alt="Мерч 3">
+                        <div class="card-body">
+                            <h5 class="card-title">AKATSUK1</h5>
+                            <p class="card-text">15999 руб. Согреет теплом даже в самые холодные времена.</p>
+                            <button class="btn btn-primary" onclick="addToCart('AKATSUK1', 'https://avatars.mds.yandex.net/i?id=2b5a713d8a2100540719a5c75c5cb9d0_l-5662815-images-thumbs&n=13')">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="page" style="display: none;">
+            <h1 class="textyes">О нас</h1>
+            <p class="textyes">Мы предоставляем лучшие услуги для наших клиентов.</p>
+            <h2 class="textyes">Наша команда</h2>
+            <p class="textyes">Пока еще нет</p>
+            <h2 class="textyes">Почему мы?</h2>
+            <p>
+                <li class="textyes">Удобный выбор товара</li>
+                <li class="textyes">Быстрая доставка по трем городам России!</li>
+                <li class="textyes">Качество</li>
+                <li class="textyes">Надежность</li>
+                <li class="textyes">Отзывчивая тех. поддержка</li>
+                <li class="textyes">Лучшая аниме-одежда в СНГ</li>
+            </p>
+            <a href="#top" class="btn btn-primary">К началу страницы</a>
+        </div>
+
+        <div id="form" class="page" style="display: none;">
+            <h1 class="textyes">Форма отправки данных</h1>
+            <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+                <input type="hidden"  name="q" value="search">    
+                <div class="form-group">
+                    <label class="textyes" for="name">ФИО</label>
+                    <input type="text" class="form-control" id="name" name="customer_name" value="Иванов Иван Иванович" required>
+                </div>
+                <div class="form-group">
+                    <label class="textyes" for="quantity">Количество товара</label>
+                    <input type="number" class="form-control" id="quantity" name="product_quantity" min="1" value="1" checked>
+                </div>
+                <div class="form-group">
+                    <label class="textyes">Город доставки</label><br>
+                    <input type="radio" id="city1" name="city" value="courier" checked>
+                    <label class="textyes" for="city1">Москва</label><br>
+                    <input type="radio" id="city2" name="city" value="post">
+                    <label class="textyes" for="city2">Нижний Новгород</label><br>
+                </div>
+                <div class="form-group">
+                    <label class="textyes" for="adres_deliv">Адрес доставки</label>
+                    <input type="text" class="form-control" id="adres" name="adres_deliv" value="ул. Ленина, д. 64, кв. 666, 198576" required>
+                </div>
+                <div class="form-group">
+                    <label class="textyes">Способ доставки</label><br>
+                    <input type="radio" id="delivery1" name="delivery_method" value="courier" checked>
+                    <label for="delivery1">Курьером</label><br>
+                    <input type="radio" id="delivery2" name="delivery_method" value="post">
+                    <label for="delivery2">Почтой</label><br>
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+        </div>
+
+        <div id="contact" class="page" style="display: none;">
+            <h1 class="textyes">Контакты</h1>
+            <p class="textyes">Вы можете связаться с нами по электронной почте: nekonya@love.ru</p>
+        </div>
+
+        <div id="cart" class="page" style="display: none;">
+            <h1 class="textyes">Корзина</h1>
+            <div id="cart-items"></div>
+            <button class="btn btn-primary" onclick="checkout()">Оформить заказ</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showPage(page) {
+            document.querySelectorAll('.page').forEach(function (el) {
+                el.style.display = 'none';
+            });
+            document.getElementById(page).style.display = 'block';
+        }
+
+        function showCart() {
+            showPage('cart');
+            displayCartItems();
+        }
+
+        function addToCart(itemName, itemImage) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: itemName, image: itemImage });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            alert(itemName + ' добавлено в корзину!');
+        }
+
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cart-count').innerText = cart.length;
+        }
+
+        function displayCartItems() {
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+
+            if (cartItems.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="textyes">Корзина пуста.</p>';
+                return;
+            }
+
+            cartItems.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'cart-item';
+                itemDiv.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" style="width: 100px; height: auto;">
+                    <span>${item.name}</span>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart('${item.name}')">Удалить</button>
+                `;
+                cartItemsContainer.appendChild(itemDiv);
+            });
+        }
+
+        function removeFromCart(itemName) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(item => item.name !== itemName);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            displayCartItems();
+        }
+
+        function checkout() {
+            
+            showPage('form');
+           
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const quantityInput = document.getElementById('quantity');
+            quantityInput.value = cartItems.length; 
+        }
+
+        showPage('home');
+        updateCartCount();
+
+        document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const formData = new FormData(this); 
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Ошибка сети');
+                }
+                return response.json(); 
+            })
+            .then(data => {
+                alert('Данные успешно отправлены: ' + JSON.stringify(data));
+                
+                localStorage.removeItem('cart');
+                updateCartCount();
+                displayCartItems();
+                showPage('home'); 
+            })
+            .catch(error => {
+                alert('Ошибка: ' + error.message);
+            });
+        });
+    </script>
+</body>
+</html>
